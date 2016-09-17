@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script type="text/javascript" src="lib/index.js"></script>
+</head>
+
+<body ng-app="WowApp">
+    <div class="container" ng-controller="TipCalculator" >
+        <h1>Tip Calculator</h1>
+        <div class="well">
+            <div class="row">
+                <label class="col-xs-4" title="result">Bill $:</label>
+                
+                <input type="text" class="col-xs-8" title="result" ng-keyup="typed(tip.bill)" ng-model="tip.bill" />
+            </div>
+            <div class="row">
+                <label class="col-xs-8" title="result">10% Tip $:</label>
+                <label class="col-xs-4" title="10%">{{tip.tenPercent}}</label>
+            </div>
+            <div class="row">
+                <label class="col-xs-8" title="result">15% Tip $:</label>
+                <label class="col-xs-4" title="15%">{{tip.fifteenPercent}}</label>
+            </div>
+            <div>
+                <div class="row ">
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(1)">1</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(2)">2</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(3)">3</button>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(4)">4</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(5)">5</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(6)">6</button>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(7)">7</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(8)">8</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default btn-lg" title="1" ng-click="press(9)">9</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        &nbsp;
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-default btn-lg" title="1" ng-click="press(0)">0</button>
+                    </div>
+                    <div class="col-xs-4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="button" class="btn btn-default btn-lg btn-block" title="1" ng-click="reset()">Reset</button>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>
